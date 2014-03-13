@@ -91,20 +91,20 @@ School.create!([
     district: 'New York City'
   },
   {
-    state: 'NY',
-    district: 'New York City'
+    state: 'FL',
+    district: 'Miami-Dade'
   },
   {
-    state: 'NY',
-    district: 'New York City'
+    state: 'NV',
+    district: 'Clark County'
   },
   {
-    state: 'NY',
-    district: 'New York City'
+    state: 'IL',
+    district: 'Chicago Public Schools'
   },
   {
-    state: 'NY',
-    district: 'New York City'
+    state: 'CA',
+    district: 'Los Angeles Unified'
   }
 ])
 
