@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
 
-  # fake list of posts to help me plan the data associations.
+=begin
+
+fake list of posts to help me plan the data associations.
   POSTS = [
     {:post_id => 1, 
      :teacher_prefix => 'Mrs', 
@@ -24,8 +26,10 @@ class PostsController < ApplicationController
      :comment => 'Mr. Jackson was the best teacher I ever had!' }
   ]
 
+=end
+
   def index
-    @posts = POSTS
+    @posts = Post.all
   end
   
   def show
