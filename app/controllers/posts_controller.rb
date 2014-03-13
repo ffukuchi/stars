@@ -1,23 +1,26 @@
 class PostsController < ApplicationController
 
-  # fake list of posts to help me with schema.
+  # fake list of posts to help me plan the data associations.
   POSTS = [
     {:post_id => 1, 
-     :prefix => 'Mrs', 
+     :teacher_prefix => 'Mrs', 
      :teacher_last_name => 'Jones', 
      :student_first_name =>'John', 
+     :school => 'PS1',
      :comment => 'Mrs. Jones was the best teacher I ever had!' },
 
     {:post_id => 2, 
-     :prefix => 'Mrs', 
+     :teacher_prefix => 'Mrs', 
      :teacher_last_name => 'Smith', 
      :student_first_name =>'Mary', 
+     :school => 'PS2',
      :comment => 'Mrs. Smith was the best teacher I ever had!' },
 
-    {:post_id => 1, 
-     :prefix => 'Mr.', 
+    {:post_id => 3, 
+     :teacher_prefix => 'Mr.', 
      :teacher_last_name => 'Jackson', 
      :student_first_name =>'Edward', 
+     :school => 'PS3',
      :comment => 'Mr. Jackson was the best teacher I ever had!' }
   ]
 
@@ -25,7 +28,20 @@ class PostsController < ApplicationController
     @posts = POSTS
   end
   
+  def show
 
-  
+  end
+
+  def new
+  end
+
+  def create
+  end
+
+  def edit
+  end
+
+  def new
+  end
 
 end
