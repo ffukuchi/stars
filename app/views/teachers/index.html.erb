@@ -1,4 +1,4 @@
-<h1>Please review these <%=pluralize(@teachers.size, 'Teacher') %></h1>
+<h1>Pick a teacher to review or add a <%= link_to("new teacher", new_teacher_path) %> </h1>
 <br>
 <% @teachers.each do |teacher| %>
  
@@ -12,5 +12,7 @@
       <%= teacher.grade %>
     </p>
   </article>
+
+
 <% end %>
 

@@ -13,8 +13,15 @@ class TeachersController < ApplicationController
   end
 
   def create
+    @teacher = Teacher.new(teacher_params)
+    if @teacher.save
+      redirect_to teachers_url 
+    else
+      render :new
+    end
   end
 
+  # where is the edit action accessed?
   def edit
     @teacher = Teacher.find(params[:id])
   end
@@ -28,7 +35,12 @@ class TeachersController < ApplicationController
     end
   end
 
+  # where does this appear? 
+  # add the link in the path for links - method: :delete, data: {confirm: 'are you sure?'}
   def destroy
+    @teacher = Teacher.find(params[:id])
+    @teacher.destroy
+    redirect_to teachers_url
   end
 
 private
