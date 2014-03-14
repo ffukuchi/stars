@@ -1,0 +1,13 @@
+
+<h1>Reviews for <%= @teacher.first_name %> <%= @teacher.last_name %> </h1>
+
+<ul>
+  <% @reviews.each do |review| %>
+    <li>
+      School Name:      <%= review.school %><br>
+      Number of Stars:  <%= review.stars %><br>
+      Review:           <%= review.review %>
+    </li>
+  <% end%>
+</ul>
+
