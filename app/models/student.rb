@@ -1,7 +1,8 @@
 class Student < ActiveRecord::Base
 
-  has_many :posts
-  has_many :teachers
+  has_many :teachers, :through => :likes
+  has_many :post
+
 
 end
 

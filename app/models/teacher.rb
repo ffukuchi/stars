@@ -1,7 +1,7 @@
 class Teacher < ActiveRecord::Base
 
-  has_many :students
+  has_many :student, :through => :like
+  has_many :post
 
 end
 
-# TO_FIX:  TEACHER only has many STUDENT through the POST table, it isn't direct 

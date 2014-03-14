@@ -2,8 +2,10 @@ Stars::Application.routes.draw do
 
   root  "posts#index"
 
-  resources :posts 
   resources :teachers 
-  resources :students 
+
+  resources :students do
+     resources :posts 
+  end
 
 end

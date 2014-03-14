@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140314002034) do
+ActiveRecord::Schema.define(version: 20140314045438) do
+
+  create_table "likes", force: true do |t|
+    t.string   "student_id"
+    t.string   "teacher_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", force: true do |t|
     t.text     "comment"
@@ -20,6 +27,8 @@ ActiveRecord::Schema.define(version: 20140314002034) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "school"
+    t.integer  "like_id"
+    t.integer  "stars"
   end
 
   create_table "schools", force: true do |t|
