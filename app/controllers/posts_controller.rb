@@ -33,7 +33,7 @@ fake list of posts to help me plan the data associations.
   end
   
   def show
-
+    @post = Post.find(params[:id])
   end
 
   def new
