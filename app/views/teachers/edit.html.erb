@@ -1,0 +1,32 @@
+<h1>Editing <%=@teacher.first_name%> <%=@teacher.last_name%> </h1>
+
+<!-- Put this form in a partial -->
+
+<%= form_for(@teacher) do |f| %>
+
+  <p>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %><br>
+  </p>
+  <p>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %><br>
+  </p>
+  <p>
+    <%= f.label :school %>
+    <%= f.text_field :school %><br>
+  </p>
+  <p>
+    <%= f.label :grade %>
+    <%= f.text_field :grade %><br>
+  </p>
+  <p>
+    <%= f.label :subject %>
+    <%= f.text_field :subject %><br>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
