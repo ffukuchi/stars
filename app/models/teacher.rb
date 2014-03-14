@@ -3,17 +3,13 @@ class Teacher < ActiveRecord::Base
   has_many :reviews 
 
 
-  validates :teacher, presence: true
+  validates :first_name, presence: true
 
-  validates  :first_name, presence: true
+  validates :last_name, presence: true
 
-  validates  :last_name, presence: true
+  validates :school, presence: true
 
-  validates  :school, presence: true
-
-  GRADE = %w(pre-K, K, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
-
-  validates  :grade, inclusio: {in: RATINGS }
+  validates :grade, presence: true
 
   validates :subject, presence: true
 

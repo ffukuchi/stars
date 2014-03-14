@@ -1,5 +1,7 @@
 <%= form_for(@teacher) do |f| %>
 
+  <%= render 'shared/errors' %>
+
   <p>
     <%= f.label :first_name %>
     <%= f.text_field :first_name %><br>
