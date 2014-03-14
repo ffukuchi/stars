@@ -1,0 +1,16 @@
+<h1>Please review these <%=pluralize(@teachers.size, 'Teacher') %></h1>
+<br>
+<% @teachers.each do |teacher| %>
+ 
+  <article>
+    <header>
+      <h2><%= teacher.first_name %> <%= teacher.last_name %></h2>
+    </header>
+    <p>
+      <%= teacher.school %>
+      <%= teacher.subject %>
+      <%= teacher.grade %>
+    </p>
+  </article>
+<% end %>
+

@@ -1,11 +1,9 @@
 Stars::Application.routes.draw do
 
-  root  "posts#index"
+  root  "teachers#index"
 
   resources :teachers 
-
-  resources :students do
-     resources :posts 
-  end
+  resources :reviews
+  resources :students 
 
 end

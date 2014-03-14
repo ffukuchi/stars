@@ -7,56 +7,59 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 
-
-Post.create!([
-  {
-    student_id: 1,
-    teacher_id: 1,
-    comment: 'AB was the best teacher!'
-  },
-  {
-    student_id: 2,
-    teacher_id: 2,
-    comment: 'BC was the best teacher!'
-  },
-  {
-    student_id: 3,
-    teacher_id: 3,
-    comment: 'CD was the best teacher!'
-  },
-])
-
-
 Teacher.create!([
   {
     first_name: 'Connie',
-    last_name: 'Walsh',
-    school_id: 10,
-    stars: 20 
+    last_name: 'Walsh'
   },
   {
     first_name: 'Allen',
-    last_name: 'Smith',
-    school_id: 11,
-    stars: 19 
+    last_name: 'Smith'
   },
   {
     first_name: 'Karen',
-    last_name: 'Stanton',
-    school_id: 12,
-    stars: 18 
+    last_name: 'Stanton'
   },
   {
     first_name: 'Pam',
-    last_name: 'Fuhr',
-    school_id: 13,
-    stars: 17 
+    last_name: 'Fuhr'
   },
   {
     first_name: 'Lisa',
-    last_name: 'Green',
-    school_id: 14,
-    stars: 16 
+    last_name: 'Green'
+  }
+])
+
+Review.create!([
+  {
+    review: 'This woman is a saint!',
+    school: 'PS1',
+    stars: 5,
+    teacher_id: 1
+  },
+  {
+    review: 'The bestest teacher!',
+    school: 'PS2',
+    stars: 5,
+    teacher_id: 2
+  },
+  {
+    review: 'The greatest teacher!',
+    school: 'PS3',
+    stars: 5,
+    teacher_id: 3
+  },
+  {
+    review: 'Amazing!',
+    school: 'PS4',
+    stars: 5,
+    teacher_id: 4
+  },
+  {
+    review: 'One of a kind!',
+    school: 'PS5',
+    stars: 5,
+    teacher_id: 5
   }
 ])
 
@@ -81,30 +84,6 @@ Student.create!([
   {
     first_name: 'Dorthy',
     last_name: 'Hines'
-  }
-])
-
-
-School.create!([
-  {
-    state: 'NY',
-    district: 'New York City'
-  },
-  {
-    state: 'FL',
-    district: 'Miami-Dade'
-  },
-  {
-    state: 'NV',
-    district: 'Clark County'
-  },
-  {
-    state: 'IL',
-    district: 'Chicago Public Schools'
-  },
-  {
-    state: 'CA',
-    district: 'Los Angeles Unified'
   }
 ])
 

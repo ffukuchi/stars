@@ -11,31 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140314045438) do
+ActiveRecord::Schema.define(version: 20140314074538) do
 
-  create_table "likes", force: true do |t|
-    t.string   "student_id"
-    t.string   "teacher_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "posts", force: true do |t|
-    t.text     "comment"
-    t.integer  "student_id"
-    t.integer  "teacher_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "reviews", force: true do |t|
+    t.text     "review"
     t.string   "school"
-    t.integer  "like_id"
     t.integer  "stars"
-  end
-
-  create_table "schools", force: true do |t|
-    t.string   "state"
-    t.string   "district"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "teacher_id"
   end
 
   create_table "students", force: true do |t|
@@ -48,10 +32,11 @@ ActiveRecord::Schema.define(version: 20140314045438) do
   create_table "teachers", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "school_id"
-    t.integer  "stars"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "school"
+    t.string   "grade"
+    t.string   "subject"
   end
 
 end
