@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140313210742) do
+ActiveRecord::Schema.define(version: 20140314002034) do
 
   create_table "posts", force: true do |t|
     t.text     "comment"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140313210742) do
     t.integer  "teacher_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "school"
   end
 
   create_table "schools", force: true do |t|
