@@ -10,29 +10,44 @@
 Teacher.create!([
   {
     first_name: 'Connie',
-    last_name: 'Walsh'
+    last_name: 'Walsh',
+    school: "PS1",
+    grade: 5,
+    subject: 'Language Arts'
   },
   {
     first_name: 'Allen',
-    last_name: 'Smith'
+    last_name: 'Smith',
+    school: "IS2",
+    grade: 6,
+    subject: "Math"
   },
   {
     first_name: 'Karen',
-    last_name: 'Stanton'
+    last_name: 'Stanton',
+    school: "IS3",
+    grade: 7,
+    subject: "Social Studies"
   },
   {
     first_name: 'Pam',
-    last_name: 'Fuhr'
+    last_name: 'Fuhr',
+    school: "IS4",
+    grade: 8,
+    subject: "Science"
   },
   {
     first_name: 'Lisa',
-    last_name: 'Green'
+    last_name: 'Green',
+    school: "High1",
+    grade: "9",
+    subject: "Algebra"
   }
 ])
 
 Review.create!([
   {
-    review: 'This woman is a saint!',
+    review: 'This teacher is a saint!',
     school: 'PS1',
     stars: 5,
     teacher_id: 1

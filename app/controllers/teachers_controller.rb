@@ -4,4 +4,24 @@ class TeachersController < ApplicationController
     @teachers = Teacher.all
   end
 
+  def show
+    @teacher = Teacher.find(params[:id])
+  end
+
+  def new
+    @teacher = Teacher.new
+  end
+
+  def create
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destory
+  end
+
 end
