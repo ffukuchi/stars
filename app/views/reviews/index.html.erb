@@ -1,13 +1,17 @@
 
 <h1>Reviews for <%= @teacher.first_name %> <%= @teacher.last_name %> </h1>
+<%= link_to "Write a review for this teacher", new_teacher_review_path(@teacher) %>
+<br>
+<br>
 
 <ul>
   <% @reviews.each do |review| %>
     <li>
+      Review:           <%= review.review %><br>
       School Name:      <%= review.school %><br>
       Number of Stars:  <%= review.stars %><br>
-      Review:           <%= review.review %>
     </li>
   <% end%>
 </ul>
+
 

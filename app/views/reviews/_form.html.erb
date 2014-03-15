@@ -1,0 +1,27 @@
+<%= form_for([@teacher, @review]) do |f| %>
+
+  <%= render 'shared/errors', object: @review %>
+
+  <fieldset>
+  <ol>
+    <p>
+      <%= f.label :review %>
+      <%= f.text_area :review, cols: 80, placeholder: 'write your review' %><br>
+    </p>
+    <p>
+      <%= f.label :school %>
+      <%= f.text_field :school %><br>
+    </p>
+    <p>
+      <%= f.label :stars %>
+      <%= f.select :stars, Review::STARS, prompt: "give a star" %><br>
+    </p>
+  </ol>
+  </fieldset>
+
+  <p>
+    <%= f.submit 'Post Review' %> | 
+    <%= link_to 'Cancel', @teacher, class: 'button' %>
+  </p>
+
+<% end %>

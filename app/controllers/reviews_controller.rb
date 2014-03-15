@@ -18,23 +18,36 @@ class ReviewsController < ApplicationController
     else
       render :new
     end
-    
   end
 
+
+# TO_FIX - these controllers are broken
+
   def edit
+    @review = Review.find(params[:id])
   end
-  
+
   def update
+    @review = @teacher.find(params[:id])
+    if @review.update(teacher_params)
+      flash[:notice] = "The review was successfully updated"
+      redirect_to teacher_reviews(@teacher)
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @review = @teacher.find(params[:id])
+    @review.destroy # there should be an alert here.
+    redirect_to teachers_reviews_url, alert: "review was destroyed"
   end
 
 
 private
 
 def review_params
-  params.require(:review).permit(:review, :schools, :stars)
+  params.require(:review).permit(:review, :school, :stars)
 end
 
 end

@@ -37,7 +37,6 @@ class TeachersController < ApplicationController
   end
 
   # where does this appear? 
-  # add the link in the path for links - method: :delete, data: {confirm: 'are you sure?'}
   def destroy
     @teacher = Teacher.find(params[:id])
     @teacher.destroy # there should be an alert here.

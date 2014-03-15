@@ -1,6 +1,6 @@
 <%= form_for(@teacher) do |f| %>
 
-  <%= render 'shared/errors' %>
+  <%= render 'shared/errors', object: @review %>
 
   <p>
     <%= f.label :first_name %>
