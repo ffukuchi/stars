@@ -1,9 +1,3 @@
 == README
 
 This application in-progress will allow students to thank their teachers.
-
-Students will log in and authenticate themselves.
-
-Students will be able to write and submit a review for a teacher and give a teacher a star(s?)
-
-Enchancement: use external API to populate Teacher db.
