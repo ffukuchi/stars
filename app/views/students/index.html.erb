@@ -1,0 +1,12 @@
+<header id="content-header">
+  <h1><%= pluralize(@students.size, 'Student') %></h1>
+</header>
+
+<ul id="students">
+  <% @students.each do |student| %>
+    <li>
+      <% student_name = student.first_name + ' ' + student.last_name %>
+      <%= link_to student_name, student_path(student) %>
+    </li>
+  <% end %>
+</ul>

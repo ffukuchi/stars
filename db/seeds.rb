@@ -49,24 +49,32 @@ Review.create!([
   {
     review: 'This teacher is a saint!',
     school: 'PS1',
+    city: 'NY',
+    state: 'NY',
     stars: 5,
     teacher_id: 1
   },
   {
     review: 'The bestest teacher!',
     school: 'PS2',
+    city: 'Los Angeles',
+    state: 'CA',
     stars: 5,
     teacher_id: 2
   },
   {
     review: 'The greatest teacher!',
     school: 'PS3',
+    city: 'Chicago',
+    state: 'IL',
     stars: 5,
     teacher_id: 3
   },
   {
     review: 'Amazing!',
     school: 'PS4',
+    city: 'Houston',
+    state: 'TX',
     stars: 5,
     teacher_id: 4
   },
@@ -74,6 +82,8 @@ Review.create!([
     review: 'One of a kind!',
     school: 'PS5',
     stars: 5,
+    city: 'Miami',
+    state: 'FL',
     teacher_id: 5
   }
 ])
@@ -82,23 +92,28 @@ Review.create!([
 Student.create!([
   {
     first_name: 'Charles',
-    last_name: 'Tuck'
+    last_name: 'Tuck',
+    email: 'charles.tuck@example.com'
   },
   {
     first_name: 'Junior',
-    last_name: 'Rowe'
+    last_name: 'Rowe',
+    email: 'junior.rowe@example.com'
   },
   {
     first_name: 'Suzanne',
-    last_name: 'Surratt'
+    last_name: 'Surratt',
+    email: 'suzanne.surratt@example.com'
   },
   {
     first_name: 'John',
-    last_name: 'Tillman'
+    last_name: 'Tillman',
+    email: 'john.tillman@example.com'
   },
   {
     first_name: 'Dorthy',
-    last_name: 'Hines'
+    last_name: 'Hines',
+    email: 'dorthy.hines@example.com'
   }
 ])
 

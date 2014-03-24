@@ -8,4 +8,6 @@ Stars::Application.routes.draw do
   
   resources :students 
 
+  get 'signup' => 'students#new'
+
 end

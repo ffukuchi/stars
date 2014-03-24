@@ -1,0 +1,30 @@
+<%= form_for(@student) do |f| %>
+
+  <%= render 'shared/errors', object: @student %>
+
+  <p>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, size: 40, autofocus: true %><br>
+  </p>
+  <p>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %><br>
+  </p>
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email %><br>
+  </p>
+  <p>
+    <%= f.label :password %>
+    <%= f.password_field :password, size: 40 %><br>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Confirm Password" %>
+    <%= f.password_field :password_confirmation, size: 40 %><br>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
