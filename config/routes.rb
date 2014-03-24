@@ -1,5 +1,7 @@
 Stars::Application.routes.draw do
 
+  resource :session
+
   root  "teachers#index"
 
   resources :teachers  do

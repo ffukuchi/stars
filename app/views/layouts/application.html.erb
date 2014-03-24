@@ -49,8 +49,13 @@
           <a class="brand" href="/">Stars for Teacher</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><a href="http://www.donorschoose.org" target="_blank"> Support Donnors Choose </a>  </li>
-              <li><%= link_to "Sign Up", signup_path %> </li>
+              <% if current_student %>
+                <li><%= link_to "Welcome" +' '+ current_student.first_name, current_student %> </li>
+                <li><%= link_to "Sign Out", session_path, method: :delete  %> </li>
+              <% else %>
+                <li><%= link_to "Sign Up", signup_path %> </li>
+                <li><%= link_to "Sign In", new_session_path %> </li>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
