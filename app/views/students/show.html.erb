@@ -3,12 +3,8 @@
     <%= @student.email %>
   </p>
 
-<%= link_to "Update Student", edit_student_path(@student)%> |
-<%= link_to "Delete Student", student_path(@student), method: :delete, data: {confirm: 'are you sure?'} %> 
-
-
-
-
-
-
+<% if current_student?(@student) %>
+  <%= link_to "Update Student", edit_student_path(@student)%> |
+  <%= link_to "Delete Student", student_path(@student), method: :delete, data: {confirm: 'are you sure?'} %> 
+<% end %>
 

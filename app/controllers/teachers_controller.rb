@@ -1,4 +1,6 @@
 class TeachersController < ApplicationController
+  before_action :require_signin, except: [:index, :show]
+  before_action :require_admin, except: [:index, :show]
 
   def index
     @teachers = Teacher.all
@@ -36,17 +38,17 @@ class TeachersController < ApplicationController
     end
   end
 
-  # where does this appear? 
   def destroy
     @teacher = Teacher.find(params[:id])
     @teacher.destroy # there should be an alert here.
     redirect_to teachers_url, alert: "a teacher was destroyed (how very mean)"
   end
 
+
 private
 
-def teacher_params
-  params.require(:teacher).permit(:last_name, :first_name, :school, :grade, :subject)
-end
+  def teacher_params
+    params.require(:teacher).permit(:last_name, :first_name, :school, :grade, :subject)
+  end
 
 end

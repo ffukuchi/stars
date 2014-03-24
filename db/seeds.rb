@@ -93,28 +93,36 @@ Student.create!([
   {
     first_name: 'Charles',
     last_name: 'Tuck',
-    email: 'charles.tuck@example.com'
+    email: 'charles.tuck@example.com',
+    password: 'password',
+    password_confirmation: 'password'
   },
   {
     first_name: 'Junior',
     last_name: 'Rowe',
-    email: 'junior.rowe@example.com'
+    email: 'junior.rowe@example.com',
+    password: 'password',
+    password_confirmation: 'password'
   },
   {
     first_name: 'Suzanne',
     last_name: 'Surratt',
-    email: 'suzanne.surratt@example.com'
+    email: 'suzanne.surratt@example.com',
+    password: 'password',
+    password_confirmation: 'password'
   },
   {
     first_name: 'John',
     last_name: 'Tillman',
-    email: 'john.tillman@example.com'
+    email: 'john.tillman@example.com',
+    password: 'password',
+    password_confirmation: 'password'
   },
   {
     first_name: 'Dorthy',
     last_name: 'Hines',
-    email: 'dorthy.hines@example.com'
+    email: 'dorthy.hines@example.com',
+    password: 'password',
+    password_confirmation: 'password'
   }
 ])
-
-

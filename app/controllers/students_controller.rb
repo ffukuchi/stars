@@ -1,5 +1,8 @@
 class StudentsController < ApplicationController
 
+  before_action :require_signin, except: [:new, :create]
+  before_action :require_correct_student, only: [:edit, :update, :destroy]
+
   def index
     @students = Student.all
   end
@@ -16,7 +19,7 @@ class StudentsController < ApplicationController
     @student = Student.new(student_params)
     if @student.save
       session[:student_id] = @student.id
-      redirect_to @student, notice: "You're now signed up."
+      redirect_to @student
     else
       render :new
     end
@@ -46,9 +49,16 @@ class StudentsController < ApplicationController
 
 private
 
-def student_params
-  params.require(:student).permit(:first_name, :last_name, :email, :password, :password_confirmation)
-end
+  def require_correct_student
+    @student = Student.find(params[:id])
+    unless current_student?(@student)
+      redirect_to root_url
+    end
+  end
+
+  def student_params
+    params.require(:student).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+  end
 
 
 end
