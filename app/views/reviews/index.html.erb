@@ -6,11 +6,14 @@
 
 <ul>
   <% @reviews.each do |review| %>
+    <p>
     <li>
+      Written by:       <%= link_to review.student.first_name, review.student %><br>
       Review:           <%= review.review %><br>
       School Name:      <%= review.school %><br>
       Number of Stars:  <%= review.stars %><br>
     </li>
+    </p>
   <% end%>
 </ul>
 

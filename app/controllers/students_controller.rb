@@ -9,6 +9,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
+    @reviews = @student.reviews
   end
 
   def new

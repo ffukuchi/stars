@@ -1,10 +1,22 @@
 <h1> <%= @student.first_name %> <%= @student.last_name %> </h1>
-  <p>
-    <%= @student.email %>
-  </p>
-
 <% if current_student?(@student) %>
   <%= link_to "Update Student", edit_student_path(@student)%> |
   <%= link_to "Delete Student", student_path(@student), method: :delete, data: {confirm: 'are you sure?'} %> 
 <% end %>
+
+
+<ul>
+  <% @reviews.each do |review| %>
+    <p>
+    <li>
+      Teacher:          <%= link_to review.teacher.last_name, review.teacher %><br>
+      Review:           <%= review.review %><br>
+      School Name:      <%= review.school %><br>
+      Number of Stars:  <%= review.stars %><br>
+    </li>
+    </p>
+  <% end%>
+</ul>
+
+
 

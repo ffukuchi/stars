@@ -8,6 +8,7 @@ class TeachersController < ApplicationController
 
   def show
     @teacher = Teacher.find(params[:id])
+    @reviews = @teacher.reviews
   end
 
   def new

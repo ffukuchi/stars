@@ -11,7 +11,19 @@
 <%= link_to "Delete Teacher", teacher_path(@teacher), method: :delete, data: {confirm: 'are you sure?'} %> 
 <% end %>
 
-<h3> <%= link_to "See reviews for this teacher", teacher_reviews_path(@teacher)  %> </h3>
+<%= link_to "Write a review", new_teacher_review_path(@teacher) %>
+<ul>
+  <% @reviews.each do |review| %>
+    <p>
+    <li>
+      Written by:       <%= link_to review.student.first_name, review.student %><br>
+      Review:           <%= review.review %><br>
+      School Name:      <%= review.school %><br>
+      Number of Stars:  <%= review.stars %><br>
+    </li>
+    </p>
+  <% end%>
+</ul>
 
 
-<%= @reviews %>
+

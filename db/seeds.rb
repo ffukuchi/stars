@@ -47,7 +47,7 @@ Teacher.create!([
 
 Review.create!([
   {
-    review: 'This teacher is a saint!',
+    review: "The sweetest person ever. Great class she is so compassionate about everything she teaches and truly cares about every student. If you can get in this class you are one of the lucky ones!",
     school: 'PS1',
     city: 'NY',
     state: 'NY',
@@ -56,7 +56,7 @@ Review.create!([
     student_id: 5
   },
   {
-    review: 'The bestest teacher!',
+    review: " Such a nice teacher. Had my whole class to his house to study for the exam and his family cooked us dinner. The nicest woman, I was so sad when the class was over. It's not an incredibly easy class but he does such a clear job of explaining everything. He won't let you fall behind. ",
     school: 'PS2',
     city: 'Los Angeles',
     state: 'CA',
@@ -65,7 +65,7 @@ Review.create!([
     student_id: 4
   },
   {
-    review: 'The greatest teacher!',
+    review: " She truly loves each of her students. She is committed and is an incredible conductor. She expects your best every day, but only because she knows what we're capable of. Don't text or talk during class - focus and give it your all. ",
     school: 'PS3',
     city: 'Chicago',
     state: 'IL',
@@ -74,7 +74,7 @@ Review.create!([
     student_id: 3
   },
   {
-    review: 'Amazing!',
+    review: "  Great teacher, she was helpful and do anything to help a studnet understand an assignment. Loved the class.",
     school: 'PS4',
     city: 'Houston',
     state: 'TX',
@@ -83,7 +83,7 @@ Review.create!([
     student_id: 2
   },
   {
-    review: 'One of a kind!',
+    review: " BEST teacher EVER!!! Very understandable and truly cares about her students passing.",
     school: 'PS5',
     stars: 5,
     city: 'Miami',
