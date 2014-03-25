@@ -1,6 +1,6 @@
 class Teacher < ActiveRecord::Base
 
-  has_many :reviews 
+  has_many :reviews, dependent: :destroy
 
 
   validates :first_name, presence: true
@@ -12,9 +12,6 @@ class Teacher < ActiveRecord::Base
   validates :grade, presence: true
 
   validates :subject, presence: true
-
-
-  # define a method to grab average rating for a teacher to show on the views
 
 
 end

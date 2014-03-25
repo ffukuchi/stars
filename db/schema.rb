@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324225103) do
+ActiveRecord::Schema.define(version: 20140325000615) do
 
   create_table "reviews", force: true do |t|
     t.text     "review"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140324225103) do
     t.integer  "teacher_id"
     t.string   "city"
     t.string   "state"
+    t.integer  "student_id"
   end
 
   create_table "students", force: true do |t|

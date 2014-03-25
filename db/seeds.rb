@@ -52,7 +52,8 @@ Review.create!([
     city: 'NY',
     state: 'NY',
     stars: 5,
-    teacher_id: 1
+    teacher_id: 1,
+    student_id: 5
   },
   {
     review: 'The bestest teacher!',
@@ -60,7 +61,8 @@ Review.create!([
     city: 'Los Angeles',
     state: 'CA',
     stars: 5,
-    teacher_id: 2
+    teacher_id: 2,
+    student_id: 4
   },
   {
     review: 'The greatest teacher!',
@@ -68,7 +70,8 @@ Review.create!([
     city: 'Chicago',
     state: 'IL',
     stars: 5,
-    teacher_id: 3
+    teacher_id: 3,
+    student_id: 3
   },
   {
     review: 'Amazing!',
@@ -76,7 +79,8 @@ Review.create!([
     city: 'Houston',
     state: 'TX',
     stars: 5,
-    teacher_id: 4
+    teacher_id: 4,
+    student_id: 2
   },
   {
     review: 'One of a kind!',
@@ -84,7 +88,8 @@ Review.create!([
     stars: 5,
     city: 'Miami',
     state: 'FL',
-    teacher_id: 5
+    teacher_id: 5,
+    student_id: 1
   }
 ])
 

@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :require_signin
 
   def index
     @teacher = Teacher.find(params[:teacher_id])
@@ -13,6 +14,7 @@ class ReviewsController < ApplicationController
   def create
     @teacher = Teacher.find(params[:teacher_id])
     @review = @teacher.reviews.new(review_params)
+    @review.student = current_student
     if @review.save 
       redirect_to teacher_reviews_path(@teacher)
     else
@@ -20,8 +22,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-
-# TO_FIX - these controllers are broken
 
   def edit
     @review = Review.find(params[:id])
@@ -47,7 +47,7 @@ class ReviewsController < ApplicationController
 private
 
 def review_params
-  params.require(:review).permit(:review, :school, :stars)
+  params.require(:review).permit(:review, :school, :stars, :city, :state)
 end
 
 end
